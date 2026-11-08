@@ -1,0 +1,52 @@
+:root {
+  --blush: #fff5f9;
+  --rose: #f0a3c5;
+  --rose-deep: #c45a8a;
+  --lilac: #d4b8f0;
+  --lilac-deep: #8b6bb5;
+  --plum: #5c2a55;
+  --plum-soft: #7a456f;
+  --ink-soft: #6b4a62;
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Outfit', 'Segoe UI', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: var(--font-body);
+  color: var(--plum);
+  background:
+    radial-gradient(ellipse 90% 50% at 100% 0%, rgba(232, 160, 198, 0.25), transparent 50%),
+    radial-gradient(ellipse 70% 40% at 0% 40%, rgba(196, 168, 230, 0.22), transparent 45%),
+    linear-gradient(180deg, #fff8fb 0%, #f7f0ff 50%, #fff5f9 100%);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+}

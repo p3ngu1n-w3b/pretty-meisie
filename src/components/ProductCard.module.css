@@ -1,0 +1,98 @@
+.card {
+  display: grid;
+  gap: 0.7rem;
+  animation: rise 520ms ease both;
+}
+
+.media {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: linear-gradient(160deg, #fff7fb, #f3e8ff);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  transition: transform 420ms ease;
+}
+
+.card:hover .image {
+  transform: scale(1.04);
+}
+
+.price {
+  position: absolute;
+  top: 0.65rem;
+  right: 0.65rem;
+  z-index: 1;
+  padding: 0.28rem 0.55rem;
+  background: color-mix(in srgb, #fff 90%, var(--rose));
+  color: var(--plum);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  box-shadow: 0 4px 16px rgba(120, 40, 90, 0.12);
+}
+
+.meta {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.category {
+  margin: 0;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--lilac-deep);
+}
+
+.name {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--plum);
+}
+
+.size {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+}
+
+.add {
+  justify-self: start;
+  margin-top: 0.35rem;
+  border: none;
+  border-bottom: 1px solid var(--rose-deep);
+  background: transparent;
+  color: var(--plum);
+  font: inherit;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.2rem 0;
+  cursor: pointer;
+  transition: color 180ms ease, border-color 180ms ease;
+}
+
+.add:hover {
+  color: var(--rose-deep);
+  border-color: var(--plum);
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
