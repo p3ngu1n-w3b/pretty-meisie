@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF5F9"/>
+      <stop offset="0.45" stop-color="#F3E8FF"/>
+      <stop offset="1" stop-color="#FCE7F3"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="980" cy="120" r="220" fill="#F0A3C5" fill-opacity="0.35"/>
+  <circle cx="160" cy="520" r="260" fill="#D4B8F0" fill-opacity="0.4"/>
+  <text x="96" y="290" fill="#5C2A55" font-family="Georgia, serif" font-size="92" font-weight="600">Pretty Meisie</text>
+  <text x="96" y="370" fill="#7A456F" font-family="Arial, sans-serif" font-size="34" letter-spacing="2">Beauty catalogue · Order on WhatsApp</text>
+</svg>
