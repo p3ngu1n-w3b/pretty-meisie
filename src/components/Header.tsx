@@ -7,7 +7,7 @@ export function Header() {
   return (
     <header className={styles.header}>
       <a href="#top" className={styles.brand}>
-        Pretty Meisie
+        <img src="/logo.jpg" alt="Pretty Meisie" className={styles.logo} />
       </a>
       <nav className={styles.nav}>
         <a href="#catalogue">Catalogue</a>

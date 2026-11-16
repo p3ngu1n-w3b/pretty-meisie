@@ -16,7 +16,8 @@ export default function App() {
           <ProductGrid />
         </main>
         <footer className={styles.footer}>
-          <p>Pretty Meisie · Orders via WhatsApp with Chanese Van Der Berg</p>
+          <img src="/logo.jpg" alt="Pretty Meisie" className={styles.footerLogo} />
+          <p>Orders via WhatsApp with Chanese Van Der Berg · 061 343 8441</p>
         </footer>
         <CartDrawer />
         <CheckoutForm />

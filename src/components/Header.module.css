@@ -13,12 +13,16 @@
 }
 
 .brand {
-  font-family: var(--font-display);
-  font-size: clamp(1.35rem, 2.4vw, 1.75rem);
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  color: var(--plum);
+  display: inline-flex;
+  align-items: center;
   text-decoration: none;
+  line-height: 0;
+}
+
+.logo {
+  display: block;
+  height: clamp(2.6rem, 7vw, 3.4rem);
+  width: auto;
 }
 
 .nav {

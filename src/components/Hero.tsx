@@ -5,8 +5,9 @@ export function Hero() {
     <section className={styles.hero} id="top" aria-label="Pretty Meisie">
       <div className={styles.veil} />
       <div className={styles.content}>
-        <p className={styles.eyebrow}>Beauty catalogue</p>
-        <h1 className={styles.brand}>Pretty Meisie</h1>
+        <h1 className={styles.brand}>
+          <img src="/logo.jpg" alt="Pretty Meisie" className={styles.logo} />
+        </h1>
         <p className={styles.tagline}>
           Slim picks in blush and lilac — curated glow, delivered through WhatsApp.
         </p>
