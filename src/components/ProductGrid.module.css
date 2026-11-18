@@ -1,18 +1,21 @@
 .section {
-  padding: clamp(2.5rem, 6vw, 4.5rem) clamp(1rem, 4vw, 2.5rem) 5rem;
+  padding: clamp(2.25rem, 5vw, 4rem) clamp(1rem, 4vw, 2.5rem) 5rem;
+  background: color-mix(in srgb, var(--surface) 92%, var(--blush));
+  border-top: 1px solid color-mix(in srgb, var(--rose-gold) 28%, transparent);
 }
 
 .head {
   max-width: 36rem;
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.5rem;
 }
 
 .title {
-  margin: 0 0 0.45rem;
+  margin: 0 0 0.4rem;
   font-family: var(--font-display);
-  font-size: clamp(1.8rem, 4vw, 2.6rem);
-  font-weight: 560;
-  color: var(--plum);
+  font-size: clamp(2rem, 4.2vw, 2.75rem);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--ink);
 }
 
 .sub {
@@ -25,39 +28,41 @@
 .filters {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.45rem;
-  margin-bottom: 1.75rem;
+  gap: 0.4rem;
+  margin-bottom: 1.6rem;
 }
 
 .filter,
 .filterActive {
-  border: 1px solid color-mix(in srgb, var(--lilac) 45%, transparent);
-  background: transparent;
-  color: var(--plum-soft);
+  border: 1px solid color-mix(in srgb, var(--rose-gold) 40%, transparent);
+  background: var(--surface);
+  color: var(--ink-soft);
   font: inherit;
-  font-size: 0.72rem;
+  font-size: 0.7rem;
+  font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  padding: 0.4rem 0.7rem;
+  padding: 0.42rem 0.72rem;
   cursor: pointer;
   transition: background 180ms ease, color 180ms ease, border-color 180ms ease;
 }
 
 .filter:hover {
-  border-color: var(--rose);
-  color: var(--plum);
+  border-color: var(--rose-deep);
+  color: var(--ink);
 }
 
 .filterActive {
-  background: var(--plum);
-  border-color: var(--plum);
+  background: var(--ink);
+  border-color: var(--ink);
   color: #fffafc;
+  box-shadow: inset 0 -2px 0 var(--rose-gold);
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 210px), 1fr));
-  gap: 1.5rem 1.1rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 180px), 1fr));
+  gap: 1.35rem 1rem;
 }
 
 .moreRow {
@@ -71,7 +76,8 @@
 .moreBtn,
 .allBtn {
   font: inherit;
-  font-size: 0.78rem;
+  font-size: 0.76rem;
+  font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   padding: 0.85rem 1.35rem;
@@ -80,22 +86,24 @@
 }
 
 .moreBtn {
-  border: none;
-  background: var(--plum);
+  border: 1px solid var(--ink);
+  background: var(--ink);
   color: #fffafc;
+  box-shadow: inset 0 -2px 0 var(--rose-gold);
 }
 
 .moreBtn:hover {
   background: var(--rose-deep);
+  border-color: var(--rose-deep);
 }
 
 .allBtn {
-  border: 1px solid color-mix(in srgb, var(--lilac) 55%, transparent);
-  background: transparent;
-  color: var(--plum);
+  border: 1px solid color-mix(in srgb, var(--rose-gold) 50%, transparent);
+  background: var(--surface);
+  color: var(--ink);
 }
 
 .allBtn:hover {
-  border-color: var(--rose);
+  border-color: var(--rose-deep);
   background: color-mix(in srgb, var(--rose) 12%, white);
 }

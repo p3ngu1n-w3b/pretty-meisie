@@ -6,10 +6,10 @@
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 0.85rem clamp(1rem, 4vw, 2.5rem);
-  background: color-mix(in srgb, var(--blush) 82%, transparent);
+  padding: 0.7rem clamp(1rem, 4vw, 2.5rem);
+  background: color-mix(in srgb, var(--surface) 88%, var(--blush));
   backdrop-filter: blur(14px);
-  border-bottom: 1px solid color-mix(in srgb, var(--lilac) 28%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--rose-gold) 35%, transparent);
 }
 
 .brand {
@@ -21,7 +21,7 @@
 
 .logo {
   display: block;
-  height: clamp(2.6rem, 7vw, 3.4rem);
+  height: clamp(2.4rem, 6.5vw, 3.1rem);
   width: auto;
 }
 
@@ -32,11 +32,17 @@
 }
 
 .nav a {
-  font-size: 0.9rem;
-  letter-spacing: 0.06em;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--plum-soft);
+  color: var(--ink-soft);
   text-decoration: none;
+  transition: color 180ms ease;
+}
+
+.nav a:hover {
+  color: var(--rose-deep);
 }
 
 .cartBtn {
@@ -44,20 +50,22 @@
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  border: 1px solid color-mix(in srgb, var(--rose) 55%, transparent);
-  background: color-mix(in srgb, var(--rose) 18%, white);
-  color: var(--plum);
+  border: 1px solid color-mix(in srgb, var(--rose-gold) 55%, transparent);
+  background: var(--surface);
+  color: var(--ink);
   font: inherit;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  padding: 0.45rem 0.9rem;
+  padding: 0.45rem 0.85rem;
   cursor: pointer;
-  transition: background 200ms ease, transform 200ms ease;
+  transition: background 200ms ease, border-color 200ms ease, transform 200ms ease;
 }
 
 .cartBtn:hover {
-  background: color-mix(in srgb, var(--rose) 32%, white);
+  background: color-mix(in srgb, var(--rose) 16%, white);
+  border-color: var(--rose-deep);
   transform: translateY(-1px);
 }
 
@@ -66,9 +74,11 @@
   height: 1.15rem;
   padding: 0 0.3rem;
   border-radius: 999px;
-  background: var(--plum);
+  background: var(--rose-deep);
   color: white;
   font-size: 0.7rem;
+  font-weight: 700;
   line-height: 1.15rem;
   text-align: center;
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--rose-gold) 50%, transparent);
 }

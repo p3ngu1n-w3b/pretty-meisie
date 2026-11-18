@@ -3,11 +3,32 @@ import { categories, products, type ProductCategory } from '../data/products'
 import { ProductCard } from './ProductCard'
 import styles from './ProductGrid.module.css'
 
-const PAGE_SIZE = 6
+const PAGE_SIZE_MOBILE = 6
+const PAGE_SIZE_DESKTOP = 16
+const DESKTOP_MQ = '(min-width: 768px)'
+
+function getPageSize() {
+  if (typeof window === 'undefined') return PAGE_SIZE_DESKTOP
+  return window.matchMedia(DESKTOP_MQ).matches ? PAGE_SIZE_DESKTOP : PAGE_SIZE_MOBILE
+}
 
 export function ProductGrid() {
   const [active, setActive] = useState<'All' | ProductCategory>('All')
-  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE)
+  const [pageSize, setPageSize] = useState(getPageSize)
+  const [visibleCount, setVisibleCount] = useState(getPageSize)
+
+  useEffect(() => {
+    const media = window.matchMedia(DESKTOP_MQ)
+    const sync = () => {
+      const next = media.matches ? PAGE_SIZE_DESKTOP : PAGE_SIZE_MOBILE
+      setPageSize(next)
+      setVisibleCount(next)
+    }
+
+    sync()
+    media.addEventListener('change', sync)
+    return () => media.removeEventListener('change', sync)
+  }, [])
 
   const filtered = useMemo(
     () => (active === 'All' ? products : products.filter((p) => p.category === active)),
@@ -15,8 +36,8 @@ export function ProductGrid() {
   )
 
   useEffect(() => {
-    setVisibleCount(PAGE_SIZE)
-  }, [active])
+    setVisibleCount(pageSize)
+  }, [active, pageSize])
 
   const visible = filtered.slice(0, visibleCount)
   const hasMore = visibleCount < filtered.length
@@ -26,7 +47,7 @@ export function ProductGrid() {
       <div className={styles.head}>
         <h2 className={styles.title}>Catalogue</h2>
         <p className={styles.sub}>
-          Nov–Dec beauty edit — complexion, skincare, colour, hair and more.
+          Soft blush favourites — complexion, skincare, colour, hair and more.
         </p>
       </div>
 
@@ -56,7 +77,7 @@ export function ProductGrid() {
           <button
             type="button"
             className={styles.moreBtn}
-            onClick={() => setVisibleCount((n) => Math.min(n + PAGE_SIZE, filtered.length))}
+            onClick={() => setVisibleCount((n) => Math.min(n + pageSize, filtered.length))}
           >
             Show more
           </button>

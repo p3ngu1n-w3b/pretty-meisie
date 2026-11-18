@@ -23,12 +23,12 @@ export function ProductCard({ product, index }: Props) {
           loading="lazy"
           className={styles.image}
         />
-        <span className={styles.price}>{formatZar(product.price)}</span>
       </div>
       <div className={styles.meta}>
         <p className={styles.category}>{product.category}</p>
         <h3 className={styles.name}>{product.name}</h3>
         {product.size ? <p className={styles.size}>{product.size}</p> : null}
+        <p className={styles.price}>{formatZar(product.price)}</p>
         <button type="button" className={styles.add} onClick={() => addItem(product.id)}>
           Add to bag
         </button>

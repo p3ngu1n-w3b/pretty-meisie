@@ -1,14 +1,14 @@
 :root {
-  --blush: #fff5f9;
-  --rose: #f0a3c5;
+  --blush: #fff5f8;
+  --blush-deep: #f5e6eb;
+  --rose: #e8a0b8;
   --rose-deep: #c45a8a;
-  --lilac: #d4b8f0;
-  --lilac-deep: #8b6bb5;
-  --plum: #5c2a55;
-  --plum-soft: #7a456f;
-  --ink-soft: #6b4a62;
-  --font-display: 'Fraunces', Georgia, serif;
-  --font-body: 'Outfit', 'Segoe UI', sans-serif;
+  --rose-gold: #c4a484;
+  --ink: #1a1216;
+  --ink-soft: #5c5256;
+  --surface: #ffffff;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Manrope', 'Segoe UI', sans-serif;
 }
 
 *,
@@ -25,11 +25,11 @@ body {
   margin: 0;
   min-width: 320px;
   font-family: var(--font-body);
-  color: var(--plum);
+  color: var(--ink);
   background:
-    radial-gradient(ellipse 90% 50% at 100% 0%, rgba(232, 160, 198, 0.25), transparent 50%),
-    radial-gradient(ellipse 70% 40% at 0% 40%, rgba(196, 168, 230, 0.22), transparent 45%),
-    linear-gradient(180deg, #fff8fb 0%, #f7f0ff 50%, #fff5f9 100%);
+    radial-gradient(ellipse 90% 45% at 100% 0%, rgba(232, 160, 184, 0.22), transparent 52%),
+    radial-gradient(ellipse 70% 40% at 0% 35%, rgba(196, 164, 132, 0.12), transparent 48%),
+    linear-gradient(180deg, #fff8fb 0%, #fff5f8 45%, #faf0f3 100%);
   -webkit-font-smoothing: antialiased;
 }
 
